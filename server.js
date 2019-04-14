@@ -5,6 +5,9 @@ const os = require('os');
 const methodOverride = require('method-override');
 const dotenv = require('dotenv').config();
 const session = require('express-session');
+const teamsRoute = require('./controllers/teamsRoute');
+const adminRoute = require('./controllers/adminRoute');
+
 
 const app = express();
 const port = process.env.PORT || process.env.PORT_LOCAL;
@@ -28,14 +31,18 @@ app.use(sessionMiddleware);
 app.use(formData.parse(options));
 app.use(formData.union());
 app.use(methodOverride('_method'));
-
-app.set('view engine', 'pug')
-
 app.use(express.static('public'));
 
+app.set('view engine', 'pug');
+
+
+
+
 app.get('/', (req, res) => {
-  res.send('Home Page');
+  res.redirect('/teams');
 });
 
+app.use('/teams', teamsRoute);
+app.use('/admin', adminRoute);
 
 app.listen(port, () => console.log(`Port: ${port}`));
