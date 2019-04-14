@@ -2,15 +2,17 @@ const express = require('express');
 const teams = express.Router();
 const Teams = require('../models/teamSchema');
 
+/*
 const newTeam = new Teams({
-  teamName: 'Ligue de football de la Martinique',
-  abbreviation: 'MTQ',
-  icon: 'can-flag',
-  league: 'FIFA',
-  sport: 'soccer'
+  teamName: "Selección Venezolana",
+  abbreviation:"VEN",
+  icon:"ven-flag",
+  league:"FIFA",
+  sport:"soccer",
 });
 
 newTeam.save().then(() => console.log('Saved'));
+*/
 
 teams.route('/')
   .get((req, res) => {

@@ -7,7 +7,7 @@ const dotenv = require('dotenv').config();
 const session = require('express-session');
 const teamsRoute = require('./controllers/teamsRoute');
 const adminRoute = require('./controllers/adminRoute');
-
+const matchesRoute = require('./controllers/matchesRoute');
 
 const app = express();
 const port = process.env.PORT || process.env.PORT_LOCAL;
@@ -35,14 +35,12 @@ app.use(express.static('public'));
 
 app.set('view engine', 'pug');
 
-
-
-
 app.get('/', (req, res) => {
   res.redirect('/teams');
 });
 
 app.use('/teams', teamsRoute);
 app.use('/admin', adminRoute);
+app.use('/matches', matchesRoute);
 
 app.listen(port, () => console.log(`Port: ${port}`));
