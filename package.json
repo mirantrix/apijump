@@ -5,9 +5,8 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
-    "client": "cd client && open index.html",
     "atom": "atom .",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run atom\""
+    "dev": "concurrently \"npm run server\" \"npm run atom\""
   },
   "author": "",
   "license": "ISC",

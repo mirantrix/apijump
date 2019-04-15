@@ -36,7 +36,7 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-  res.redirect('/teams');
+  res.redirect('/matches');
 });
 
 app.use('/teams', teamsRoute);

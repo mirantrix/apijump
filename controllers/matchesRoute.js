@@ -1,7 +1,9 @@
 const express = require('express');
 const matches = express.Router();
 const Matches = require('../models/matchSchema');
-const upComing = require('../middleware/upComing');
+const Teams = require('../models/teamSchema');
+const teamMatches = require('../middleware/teamMatches');
+
 
 /*
 const newMatch = new Matches({
@@ -21,11 +23,13 @@ matches.route('/')
   .get((req, res) => {
     const teamId = '5cb27bd6d2123108e17fd996';
     Matches.find().or([{ local: teamId }, { visiting: teamId }])
-      .then(localMatches => {
-        console.log(upComing(localMatches))
-        res.json(localMatches);
-      }).catch(err => {
-        console.log(err);
+    .populate('local')
+    .populate('visiting')
+    .exec(function (err, matches) {
+      if (err) console.log(err);
+      const { next, previous } = teamMatches(matches);
+      console.log(next);
+      res.render('index', { data: next });
     });
   });
 
