@@ -1,0 +1,377 @@
+body {
+  max-width: 500px;
+  background-color: #212d35;
+  color: #FFFFFF;
+  margin: 0 auto;
+  font-family: "Monda", monospace;
+}
+
+.jumbotron-nupi {
+  margin: 0 0 2rem;
+}
+
+
+#footer{
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+.footer-brand figure {
+  padding-right: .8rem;
+}
+
+.footer-brand img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.footer-legal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #2a3943;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  color: #486071;
+  font-size: .8rem;
+  line-height: .8rem;
+}
+
+.siSePuede {
+  color: #00ff72;
+}
+
+.tags {
+  color: #dedede;
+}
+
+.intro {
+  border-bottom: 1px solid #2a3943;
+  padding: 2rem 0 0 0;
+}
+
+.intro h2 {
+  font-family: Helvetica;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-bottom: 1rem;
+}
+
+.intro p {
+  color: #00ff72;
+  width: 80%;
+}
+
+.header {
+  height: 2rem;
+  width: 100%;
+  background-color: #00db62;
+}
+
+#match-cards {
+  min-width: 300px;
+  width: 90%;
+}
+
+.match {
+  background-color: #131b22;
+  border-radius: .5rem;
+  margin: 1rem 0;
+  border-bottom: 5px solid #1e2a33;
+  background-image: linear-gradient(#1b1b1b #1b1b1b);
+  -webkit-box-shadow: 0px 43px 105px -15px rgba(0,0,0,.5);
+  -moz-box-shadow: 0px 43px 105px -15px rgba(0,0,0,.5);
+  box-shadow: 0px 43px 105px -15px rgba(0,0,0,.5);
+}
+
+.match-card {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Monda', monospace;
+  padding: 2rem 1.3rem;
+  justify-content: space-between;
+}
+
+.match-teams {
+  display: flex;
+  letter-spacing: .1rem;
+  flex-direction: column;
+}
+
+.match-teams ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.match-teams li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-status h3 {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1rem;
+  margin: .5rem .5rem 0 .5rem;
+}
+
+img.team-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+
+.match-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.month {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #dedede;
+}
+
+.date {
+  font-family: Helvetica;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 0;
+  text-align: center;
+}
+
+.time {
+  color: #dedede;
+  font-size: .8rem;
+  line-height: 1rem;
+}
+
+.brd-1 {
+  display: block;
+  border: .1rem solid #005e2a;
+}
+
+.brd-2 {
+  display: block;
+  border: .1rem solid #00b250;
+}
+
+.brd-3 {
+  display: block;
+  border: .1rem solid #00ff72;
+}
+
+
+.more-details {
+  display: flex;
+  justify-content: center;
+}
+
+.more-details span {
+  color: #5a748e;
+  display: inline-block;
+  border: .1rem solid #5a748e;
+  border-radius: 1rem;
+  padding: 0rem 1rem .2rem;
+}
+
+.game-emojis {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.emoji-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: .5rem;
+}
+
+.match-type {
+  color: #7d9cbb;
+}
+
+.versus {
+  padding: 0 .5rem;
+}
+
+.complementary-info{
+  border-top: 1px solid #2a3943;
+  display: flex;
+  justify-content: space-around;
+  padding: .8rem 0;
+  color: #7490a4;
+  font-size: .8rem;
+  line-height: .8rem;
+}
+
+#countdown {
+  background-image: linear-gradient(#00ff72, #00ff72);
+}
+
+#countdown-clock {
+  color: #002d14;
+  border-bottom: 3px solid #00b14f;
+  padding: 1rem 0 .8rem 0;
+}
+
+#jumbotron img{
+  border-bottom: 5px solid #f4f7fe;
+}
+
+.countdown-shadow {
+  -webkit-box-shadow: 0px 43px 105px -15px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 43px 105px -15px rgba(0,0,0,1);
+  box-shadow: 0px 43px 105px -15px rgba(0,0,0,1);
+}
+
+.timer-blocks {
+  padding: .2rem .2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+  font-family: 'Abel', monospace;
+  display: flex;
+  align-items: flex-end;
+}
+
+.faltan{
+  color: #00d961;
+  font-size: .8rem;
+  font-weight: bold;
+  padding: .3rem .8rem;
+  border: 2px solid #00d961;
+  border-radius: 1rem;
+}
+
+.falta-container{
+  padding: .3rem .8rem .3rem 0;
+  display: flex;
+}
+
+.time-value {
+}
+
+.time-symbol {
+  color: #002d14;
+}
+
+.time-indicator {
+  color: #007b37;
+  font-size: .6rem;
+  line-height: .6rem;
+  font-family: 'Monda', Helvetica;
+  padding-left: .3rem;
+}
+
+.next-match {
+  color: #002d14;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: 400;
+
+}
+
+#upComming-match {
+  background-color: #f4f7fe;
+  width: 100%;
+  color: #35485b;
+  padding: 0 0 1rem 0;
+
+}
+
+#upComming-match .intro {
+  padding: 1rem 0 0 0;
+  border-bottom: 1px solid #dae9f8;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+#upComming-match p{
+  color: #00b14f;
+}
+
+#upComming-match .complementary-info p{
+  color: #35485b;
+}
+
+#upComming-match .match {
+  border-bottom: 5px solid #e1e5f0;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  width: 90%;
+  background-image: linear-gradient(#FFFFFF, #FFFFFF);
+  -webkit-box-shadow: 0px 43px 105px -15px rgba(89,97,122,.1);
+  -moz-box-shadow: 0px 43px 105px -15px rgba(89,97,122,.1);
+  box-shadow: 0px 43px 105px -15px rgba(89,97,122,.1);
+}
+
+#upComming-match .date, #upComming-match .match-teams {
+  color: #19222a;
+}
+
+#upComming-match .versus {
+  color: #7d9cbb;
+}
+
+#upComming-match .month {
+  color: #00b14f;
+  font-weight: 700;
+}
+
+#upComming-match .time {
+  color: #35485b;
+}
+
+#upComming-match .complementary-info{
+  color: #35485b;
+  border-top: 1px solid #dae9f8;
+  border-bottom: 0;
+}
+
+
+@font-face  {
+  font-family: 'FFF World Cup 2018 Adidas', monospace;
+  src: url("./public/fonts/adidas-mexico.ttf") format('ttf');
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 576px)  {
+}
+
+@media (min-width: 768px)  {
+  #team-cards {
+    min-width: 500px;
+    max-width: 700px;
+  }
+
+  #team-cards article {
+    padding: 3rem 3rem;
+  }
+}
+
+@media (min-width: 992px)  {
+}
+
+@media (min-width: 1200px)  {
+}

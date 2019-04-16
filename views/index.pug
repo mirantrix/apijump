@@ -1,10 +1,9 @@
 extends ./layout.pug
 block content
-  h1 Upcoming Games
-  ul
-    for item in data
-      li 
-        p #{item.matchDate}
-        p #{item.local.abbreviation} vs #{item.visiting.abbreviation}
-        p #{item.tournament} • #{item.city}
+  section(id='match-cards' class='container')
+    h1
+    ul(id='matches')
+      
+            
+  script(src='/js/date.js', onload='run()')
       
