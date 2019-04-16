@@ -1,26 +1,7 @@
 
-function getData() {
-  let endpoint = 'https://next-fc.herokuapp.com/matches/api';
-  fetch(endpoint)
-  .then(function(api) {
-    return api.text();
-  })
-  .then(function(json) {
-    response(json);
-    console.log('Request successful');
-  })
-  .catch(function(error) {
-    console.log('Request failed', error)
-  });
-}
-
 function response(json) {
-  const response = JSON.parse(json);
-  //response.map(iterateMacthes);
-  const matches = document.getElementById('matches');
-  let li = document.createElement('li');
-  li.innerHTML = "Mobile Load";
-  matches.appendChild(li);
+  let data = json[0];
+  data.map(iterateMacthes);
 }
 
 function matchDateConvertion(matchDate){
