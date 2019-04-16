@@ -1,3 +1,43 @@
+
+function getData() {
+  let endpoint = 'https://next-fc.herokuapp.com/matches/api';
+  fetch(endpoint)
+  .then(function(api) {
+    return api.text();
+  })
+  .then(function(json) {
+    response(json);
+    console.log('Request successful');
+  })
+  .catch(function(error) {
+    console.log('Request failed', error)
+  });
+}
+
+function response(json) {
+  const response = JSON.parse(json);
+  response.map(iterateMacthes);
+}
+
+function matchDateConvertion(matchDate){
+  let dateToArray = String(new Date(matchDate)).split(" ");
+  let day = dateToArray[0];
+  let month = dateToArray[1];
+  let date = dateToArray[2];
+  let time = dateToArray[4].split(":");
+  let hours = time[0];
+  let minutes = time[1];
+  let matchTime = `${day}, ${hours}:${minutes} pm`;
+
+  return {
+    day,
+    month,
+    date,
+    matchTime
+  }
+}
+
+
 function iterateMacthes(eachMatch){
   let { day,month,date,matchTime } = matchDateConvertion(eachMatch.matchDate);
   const matches = document.getElementById('matches');
@@ -38,42 +78,4 @@ function iterateMacthes(eachMatch){
 
   matches.appendChild(li);
   return;
-}
-
-function getData() {
-  const endpoint = 'https://next-fc.herokuapp.com/matches/api';
-  fetch(endpoint)
-  .then(function(api) {
-    return api.text();
-  })
-  .then(function(json) {
-    response(json);
-    console.log('Request successful');
-  })
-  .catch(function(error) {
-    console.log('Request failed', error)
-  });
-}
-
-function response(json) {
-  const response = JSON.parse(json);
-  response.map(iterateMacthes);
-}
-
-function matchDateConvertion(matchDate){
-  let dateToArray = String(new Date(matchDate)).split(" ");
-  let day = dateToArray[0];
-  let month = dateToArray[1];
-  let date = dateToArray[2];
-  let time = dateToArray[4].split(":");
-  let hours = time[0];
-  let minutes = time[1];
-  let matchTime = `${day}, ${hours}:${minutes} pm`;
-
-  return {
-    day,
-    month,
-    date,
-    matchTime
-  }
 }
