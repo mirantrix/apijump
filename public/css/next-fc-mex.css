@@ -348,30 +348,3 @@ img.team-icon {
   border-top: 1px solid #dae9f8;
   border-bottom: 0;
 }
-
-
-@font-face  {
-  font-family: 'FFF World Cup 2018 Adidas', monospace;
-  src: url("./public/fonts/adidas-mexico.ttf") format('ttf');
-}
-
-/* Responsive Breakpoints */
-@media (min-width: 576px)  {
-}
-
-@media (min-width: 768px)  {
-  #team-cards {
-    min-width: 500px;
-    max-width: 700px;
-  }
-
-  #team-cards article {
-    padding: 3rem 3rem;
-  }
-}
-
-@media (min-width: 992px)  {
-}
-
-@media (min-width: 1200px)  {
-}

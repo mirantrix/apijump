@@ -318,19 +318,3 @@ ul, ol, li {list-style-type: none;}
 .pl-md{ padding-left: 1.5rem;}
 .pl-lg{ padding-left: 3rem;}
 .pl-xl{ padding-left: 5rem;}
-
-
-
-
-/* Responsive Breakpoints */
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
-}
