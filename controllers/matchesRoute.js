@@ -36,7 +36,7 @@ matches.route('/api')
 
 matches.route('/fmf')
   .get((req, res) => {
-    res.sendfile('./public/html/index.html');
+    res.render('index');
   });
 
 module.exports = matches;

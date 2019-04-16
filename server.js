@@ -35,7 +35,7 @@ app.use(formData.union());
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-//app.set('view engine', 'pug');
+app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
   res.redirect('/matches/fmf');
