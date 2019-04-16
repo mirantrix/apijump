@@ -1,7 +1,22 @@
 
+function getData() {
+  let endpoint = 'https://next-fc.herokuapp.com/matches/api';
+  fetch(endpoint)
+  .then(function(api) {
+    return api.text();
+  })
+  .then(function(json) {
+    response(json);
+    console.log('Request successful');
+  })
+  .catch(function(error) {
+    console.log('Request failed', error)
+  });
+}
+
 function response(json) {
-  let data = json[0];
-  data.map(iterateMacthes);
+  const response = JSON.parse(json);
+  response.map(iterateMacthes);
 }
 
 function matchDateConvertion(matchDate){
@@ -60,7 +75,7 @@ function iterateMacthes(eachMatch){
           <p class="city">${eachMatch.city}</p>\
         </div>\
       </div>`
-  
+
   matches.appendChild(li);
   return;
 }

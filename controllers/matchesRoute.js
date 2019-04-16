@@ -19,7 +19,7 @@ const newMatch = new Matches({
 newMatch.save().then(() => console.log('Saved'));
 */
 
-matches.route('/fmf')
+matches.route('/api')
   .get((req, res) => {
     const teamId = '5cb27bd6d2123108e17fd996';
     Matches.find().or([{ local: teamId }, { visiting: teamId }])
@@ -29,10 +29,14 @@ matches.route('/fmf')
       if (err) console.log(err);
       const { next, previous } = teamMatches(matches);
       console.log(next);
-      res.render('index', {next: [next]});
+      res.json(next);
     });
   });
 
 
+matches.route('/fmf')
+  .get((req, res) => {
+    res.render('index');
+  });
 
 module.exports = matches;
