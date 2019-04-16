@@ -27,9 +27,8 @@ function iterateMacthes(eachMatch){
   let { day,month,date,matchTime } = matchDateConvertion(eachMatch.matchDate);
   const matches = document.getElementById('matches');
   let li = document.createElement('li');
-  li.innerHTML = eachMatch.local.abbreviation;
   // Mockup, will Refactor
-  /*
+
   li.innerHTML =
       `<div class="match">\
         <div class="match-card">\
@@ -61,7 +60,7 @@ function iterateMacthes(eachMatch){
           <p class="city">${eachMatch.city}</p>\
         </div>\
       </div>`
-  */
+  
   matches.appendChild(li);
   return;
 }
