@@ -1,6 +1,6 @@
 
 function getData() {
-  let endpoint = 'http://localhost:5000/matches/api'; //'https://next-fc.herokuapp.com/matches/api';
+  let endpoint = 'https://next-fc.herokuapp.com/matches/api';
   fetch(endpoint)
   .then(function(api) {
     return api.text();
