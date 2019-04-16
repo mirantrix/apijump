@@ -1,9 +1,9 @@
 extends ./layout.pug
 block content
   section(id='match-cards' class='container')
-    h1 Hello
+    - let info = JSON.stringify(next)
     ul(id='matches')
       
-  script(src='/js/date.js', onload=`getData()`)
+  script(id='script', src='/js/date.js', onload=`response(${info})`)
 
       

@@ -1,24 +1,15 @@
 
-function getData() {
-  let endpoint = 'https://next-fc.herokuapp.com/matches/api';
-  fetch(endpoint)
-  .then(function(api) {
-    return api.text();
-  })
-  .then(function(json) {
-    response(json);
-    console.log('Request successful');
-  })
-  .catch(function(error) {
-    console.log('Request failed', error)
-  });
-}
-
 function response(json) {
-  const response = JSON.parse(json);
-  response.map(iterateMacthes);
+  json.map(iterateMacthes);
+  deleteOnloadAttribute();
 }
 
+function deleteOnloadAttribute(){
+  let what = document.getElementById('script');
+  what.removeAttribute('onload');
+}
+
+// Refactor Date
 function matchDateConvertion(matchDate){
   let dateToArray = String(new Date(matchDate)).split(" ");
   let day = dateToArray[0];
@@ -42,8 +33,8 @@ function iterateMacthes(eachMatch){
   let { day,month,date,matchTime } = matchDateConvertion(eachMatch.matchDate);
   const matches = document.getElementById('matches');
   let li = document.createElement('li');
-  // Mockup, will Refactor
 
+  // Mockup, will Refactor
   li.innerHTML =
       `<div class="match">\
         <div class="match-card">\
