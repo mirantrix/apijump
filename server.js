@@ -8,6 +8,14 @@ const session = require('express-session');
 const teamsRoute = require('./controllers/teamsRoute');
 const adminRoute = require('./controllers/adminRoute');
 const matchesRoute = require('./controllers/matchesRoute');
+const cors = require('cors');
+// CORS
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 const app = express();
 const port = process.env.PORT || process.env.PORT_LOCAL;
