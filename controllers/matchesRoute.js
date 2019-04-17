@@ -29,7 +29,7 @@ matches.route('/fmf')
       if (err) console.log(err);
       const { next, previous } = teamMatches(matches);
       console.log(next);
-      res.render('index', { next });
+      res.json(next);
     });
   });
 
