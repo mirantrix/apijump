@@ -18,13 +18,13 @@ function matchDateConvertion(matchDate){
   let time = dateToArray[4].split(":");
   let hours = time[0];
   let minutes = time[1];
-  let matchTime = `${day}, ${hours}:${minutes} pm`;
 
   return {
     day,
     month,
     date,
-    matchTime
+    hours,
+    minutes
   }
 }
 
