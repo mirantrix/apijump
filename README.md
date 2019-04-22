@@ -1,8 +1,8 @@
 ## Name
 
-Next FC Web App
+api-Jump
 
 
 ## Description
 
-The Next FC Web App shows the upcoming matches of you favorite teams.
+Heroku + MongoDB API Environment
