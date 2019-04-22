@@ -23,7 +23,7 @@ const options = {
 };
 
 const corsOptions = {
-  origin: '*',
+  origin: ['https://www.heroku.com/, https://herokuapp.com/', 'http://mirantrix.com/'],
   optionsSuccessStatus: 200,
 };
 
@@ -42,8 +42,6 @@ app.use(formData.parse(options));
 app.use(formData.union());
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
-
-app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
   res.redirect('/matches/fmf');
