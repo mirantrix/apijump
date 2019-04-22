@@ -23,7 +23,7 @@ const options = {
 };
 
 const corsOptions = {
-  origin: 'https://nextfc.herokuapp.com/',
+  origin: '*',
   optionsSuccessStatus: 200,
 };
 
