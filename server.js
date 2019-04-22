@@ -23,7 +23,7 @@ const options = {
 };
 
 const corsOptions = {
-  origin: ['https://www.heroku.com/, https://herokuapp.com/', 'http://mirantrix.com/'],
+  origin: ['https://nextfc.herokuapp.com/', 'http://mirantrix.com/'],
   optionsSuccessStatus: 200,
 };
 
